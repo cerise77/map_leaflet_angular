@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit,Renderer2 } from '@angular/core';
 import { HttpService} from './http.service';
 import * as L from "leaflet";
 import 'leaflet-polylinedecorator';
@@ -27,7 +27,7 @@ export class MapComponent implements OnInit {
       };
 
 
-    constructor(private httpService: HttpService) { }
+    constructor(private httpService: HttpService, private renderer: Renderer2) { }
 
 
     ngOnInit() {
